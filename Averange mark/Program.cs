@@ -10,7 +10,7 @@ namespace Averange_mark
         static string[] ReadFilesList ()
         {
             List<string> files = new List<string>();
-            Console.WriteLine("Введіть назви файлів:");
+            Console.WriteLine("Введіть назви файлів (без розширення):");
             while (true)
             {
                 string input = Console.ReadLine();
@@ -90,7 +90,7 @@ namespace Averange_mark
                 }
             }
 
-            Console.WriteLine();
+            Console.WriteLine("\nРезультати:");
             StreamWriter fileWriteStream = new StreamWriter($"Результати - {DateTime.Now.ToString("dd.MM.yyyy HH.mm")}.txt");
             foreach (string s in results.Keys)
             {
